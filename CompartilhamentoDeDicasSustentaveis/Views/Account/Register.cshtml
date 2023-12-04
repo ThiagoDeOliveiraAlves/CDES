@@ -1,0 +1,36 @@
+﻿@model CadastrarViewModel;
+@{
+    ViewData["Title"] = "Cadastro";
+}
+<div class="container">
+    <div class="formDesign">
+        <form method="post" asp-controller="Account" asp-action="Register">
+            <h2>Cadastre-se</h2>
+            <br>
+            <div class="mb-3">
+                <label for="formGroupExampleInput" class="form-label"><b>Nome</b></label>
+                <input type="text" class="inputForm" asp-for="Nome" id="Nome" placeholder="Digite seu nome">
+                <span class="text-danger" asp-validation-for="Nome"></span>
+            </div>
+            <div class="mb-3">
+                <label for="formGroupExampleInput2" class="form-label"><b>Email</b></label>
+                <input type="email" class="inputForm" asp-for="Email" id="Email" placeholder="Digite seu E-mail">
+                <span class="text-danger" asp-validation-for="Email"></span>
+            </div>
+            <div class="mb-3">
+                <label for="formGroupExampleInput2" class="form-label"><b>Senha</b></label>
+                <input type="password" class="inputForm" asp-for="Senha" id="Senha" placeholder="Digite uma senha">
+                <span class="text-danger" asp-validation-for="Senha"></span>
+            </div>
+            <div class="mb-3">
+                <label for="formGroupExampleInput2" class="form-label"><b>Senha</b></label>
+                <input type="password" class="inputForm" asp-for="ConfirmarSenha" id="Senha" placeholder="Digite uma senha">
+                <span class="text-danger" asp-validation-for="ConfirmarSenha"></span>
+            </div>
+            
+            <div class="mb-3">
+                <button type="submit" class="btn btn-success">Cadastrar</button>
+            </div>
+        </form>
+    </div>
+</div>

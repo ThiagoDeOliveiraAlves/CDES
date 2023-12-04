@@ -1,0 +1,152 @@
+﻿@using CompartilhamentoDeDicasSustentaveis.Entities;
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<UsuarioIdentity> SignInManager
+
+@model List<PostagemViewModel>
+@{
+    ViewData["Title"] = "Postar";
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ChatTeste</title>
+    <!--O script abaixo foi usado para fazer solicitações JQuery-->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <link rel="stylesheet" href="~/css/Postagem.css" />
+</head>
+<body>
+    <!--Como queremos subir uma imagem, precisamos usar esse treco
+    enctype="multipart/form-data", ele informa que serão enviados multiplos tipos de dados, como arquivos-->
+    <!--action="/Postagem/Postagem2"-->
+    <div class="left">
+        <div class="menu">
+            <br />
+            <h2>ℂ𝔻𝔼𝕊</h2>
+            <br />
+            <br />
+            <ul>
+                <li><a asp-area="" asp-controller="Postagem" asp-action="Filtrar">Filtrar</a></li>
+                <li><a asp-area="" asp-controller="Postagem" asp-action="Postagem">Chat Global</a></li>
+                <li><a href="">Seus Grupos</a></li>
+                <li><a href="">Salvos</a></li>
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                
+                @if (SignInManager.IsSignedIn(User))
+                {
+                    <li>
+                        <form class="form-logout" method="post" asp-controller="Account" asp-action="Logout">
+                            <button type="submit"> Logout @User.Identity.Name </button>
+                        </form>  
+                    </li>
+                }
+                
+            </ul>
+        </div>
+    </div>
+    <div class="center">
+        <br />
+        <h2>Chat global</h2>
+        <br />
+        <div class="chat">
+            <ul id="postagens" class="postagens">
+                
+            </ul>
+        </div>
+
+    </div>
+
+
+    <div class="right">
+        <div class="postar">
+         
+            <h3>Faça sua postagem</h3>
+            <br />
+            <label>Título</label>
+            <br />
+            <input type="text" id="titulo" class="inputFormat" placeholder="Insira o título da postagem" />
+            <br>
+            <br />
+            <label>Conteúdo</label>
+            <br>
+            <!--<input type="text" id="texto" placeholder="Digite seu texto aqui" />-->
+            <textarea id="texto" placeholder="Digite seu texto aqui"></textarea>
+            <br>
+            <br />
+            <label>Anexar imagens</label>
+            <br>
+            <input type="file" id="imagens" enctype="multipart/form-data" multiple />
+            <br>
+            <br />
+            <label>Categoria:</label>
+            <br />
+            <select id="categoria">
+                <option>Economia de água</option>
+                <option>Economia de energia</option>
+                <option>Reuso</option>
+
+            </select>
+            <br />
+            <div class="imagens-carregadas" id="imgs-carregadas">
+
+            </div>
+            <br>
+            <button class="btn-submit" id="Enviar">Enviar</button>
+            <br>
+
+        </div>
+    </div>
+
+    
+    <script>
+        
+        var teste = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(Model));
+
+        teste.forEach(function (p) {
+            var postagemTitulo = p.Titulo;
+            var postagemTexto = p.Texto;
+            var titulo = document.createElement("h3");
+            var texto = document.createElement("p");
+            titulo.innerHTML = postagemTitulo;
+            texto.innerHTML = postagemTexto;
+
+            var li = document.createElement("li");
+
+            li.appendChild(titulo);
+            li.appendChild(texto);
+            console.log("Testezinho");
+
+            p.ImagemBase64.forEach(function (imgBase64) {
+                var img = document.createElement("img");
+                img.style.width = "600px";
+                img.style.margin = "auto";
+                img.style.marginBottom = "20px";
+                img.src = "data:image/jpeg;base64," + imgBase64.ImgBase64;
+                
+                li.appendChild(img);
+            });
+
+            var ul = document.getElementById("postagens");
+            ul.appendChild(li);
+        });
+       
+    </script>
+
+   
+
+    <!--Subir a postagem-->
+    <script src="~/js/enviarPostagem.js"~></script>
+
+
+</body>
+</html>
+

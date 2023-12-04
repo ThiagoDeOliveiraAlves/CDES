@@ -1,0 +1,155 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /*background-color: rgb(231, 230, 230);*/
+    font-family: Georgia, "Noto Sans", "Liberation Sans";
+    font-weight: 400;
+    color: #212529;
+}
+
+h1 {
+    font-weight: 400;
+    font-size: 2.5rem;
+    color: #212529;
+}
+
+h2 {
+    font-weight: 400;
+    font-size: 2rem; /*2rem*/
+    color: #212529;
+}
+
+h3 {
+    font-size: 1.75rem;
+    font-weight: 400;
+    color: #212529;
+}
+
+.left {
+    margin: 0 30px 0 0;
+    width: 13.7%;
+    height: 800px;
+    float: left;
+}
+
+.menu {
+    /*background-color: rgb(90, 197, 99);*/
+    background-color: #216129;
+    border-right: 1px solid;
+    margin: 0 10px 0 0;
+    box-shadow: 4px 2px 0 #a6c08d;
+    position: fixed;
+    width: 13.7%;
+    height: 800px;
+    float: left;
+}
+
+    .menu h2 {
+        font-weight: 500;
+        font-size: 3rem; /*2rem*/
+        color: white;
+    }
+
+    .menu li {
+        line-height: 60px;
+        font-size: 18px;
+        text-decoration: none;
+        padding: 0 15px 0 5px;
+    }
+
+    .menu a {
+        font-weight: 300;
+        text-decoration: none;
+        color: white;
+    }
+
+        .menu a:hover {
+            font-size: 22px;
+            background-color: rgba(243, 243, 243, 0.89);
+            color: rgb(77, 54, 24);
+        }
+
+    .menu button {
+        width: 100px;
+        background-color: #d7dbdb;
+        padding: 10px;
+        font-size: 16px;
+        width: 140px;
+        color: white;
+        text-decoration: underline;
+    }
+
+.center {
+    width: 60%;
+    float: left;
+}
+
+    .center h2 {
+        padding: 15px 0 0 20px;
+    }
+
+.inputFormat {
+    width: 240px;
+    height: 25px;
+    font-size: 16px;
+}
+
+
+.btn-submit {
+    background-color: #25b61d;
+    width: 100px;
+    height: 30px;
+    color: white;
+    font-size: 16px;
+    margin: 40px 0 0 80px;
+}
+
+.form-logout {
+    margin: auto;
+}
+
+    .form-logout button {
+        border-radius: 10px;
+        display: inline-block;
+        background-color: #003540;
+        text-decoration: none;
+        margin: auto;
+    }
+
+.filtrar form {
+    border: 1px solid gray;
+    border-radius: 20px;
+    width: 500px;
+    background-color: #003540;
+    color: white;
+    font-size: 20px;
+    padding: 20px 50px 20px 50px;
+    margin: 30px 15px 0 15px;
+}
+
+.filtrar input{
+    font-size: 17px;
+    margin: auto;
+}
+
+.filtrar select {
+    font-size: 17px;
+}
+
+.filtrar button{
+    border-radius: 5px;
+    color: white;
+    background-color: darkgreen;
+    font-size: 18px;
+    padding: 5px 20px 5px 20px;
+    margin: 15px 200px 15px 200px;
+}
+
+.formTitulo{
+    font-size: 25px;
+    color: white;
+}
+

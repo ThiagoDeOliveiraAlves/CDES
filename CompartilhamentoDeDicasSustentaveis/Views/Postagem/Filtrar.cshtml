@@ -1,0 +1,83 @@
+﻿@using CompartilhamentoDeDicasSustentaveis.Entities;
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<UsuarioIdentity> SignInManager
+
+@model List<PostagemViewModel>
+@{
+    ViewData["Title"] = "Filtrar";
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ChatTeste</title>
+    <!--O script abaixo foi usado para fazer solicitações JQuery-->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <link rel="stylesheet" href="~/css/Filtrar.css" />
+</head>
+<body>
+    <!--Como queremos subir uma imagem, precisamos usar esse treco
+    enctype="multipart/form-data", ele informa que serão enviados multiplos tipos de dados, como arquivos-->
+    <!--action="/Postagem/Postagem2"-->
+    <div class="left">
+        <div class="menu">
+            <br />
+            <h2>ℂ𝔻𝔼𝕊</h2>
+            <br />
+            <br />
+            <ul>
+                <li><a href="">Pesquisar</a></li>
+                <li><a asp-area="" asp-controller="Postagem" asp-action="Postagem">Chat Global</a></li>
+                <li><a href="">Seus Grupos</a></li>
+                <li><a href="">Salvos</a></li>
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+
+                @if (SignInManager.IsSignedIn(User))
+                {
+                    <li>
+                        <form class="form-logout" method="post" asp-controller="Account" asp-action="Logout">
+                            <button type="submit"> Logout @User.Identity.Name </button>
+                        </form>
+                    </li>
+                }
+
+            </ul>
+        </div>
+    </div>
+    <div class="center">
+        <h2>Filtrar postagens</h2>
+        <div class="filtrar">
+            <form method="get" asp-controller="Postagem" asp-action="PostagensFiltradas">
+                <label><h3 class="formTitulo">Periodo</h3></label>
+                <br />
+                De
+                <input name="dataInicio" type="date" id="dataInicio" oninput="verificarInputs"/>
+                até
+                <input name="dataFim" type="date" id="dataFim" oninput="verificarInputs"/>
+                <br />
+                <br />
+                <label>Categoria</label>
+                <br />
+                <select name="categoria" id="categoria">
+                    <option>Economia de água</option>
+                    <option>Economia de energia</option>
+                    <option>Reuso</option>
+                </select>
+                <br />
+                <br />
+                <button type="submit" id="enviar">Buscar</button>
+            </form>
+        </div>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,180 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /*background-color: rgb(231, 230, 230);*/
+    font-family: Georgia, "Noto Sans", "Liberation Sans";
+    font-weight: 400;
+    color: #212529;
+}
+
+h1 {
+    font-weight: 400;
+    font-size: 2.5rem;
+    color: #212529;
+}
+
+h2 {
+    font-weight: 400;
+    font-size: 2rem; /*2rem*/
+    color: #212529;
+}
+
+h3 {
+    font-size: 1.75rem;
+    font-weight: 400;
+    color: #212529;
+}
+
+.left {
+    margin: 0 30px 0 0;
+    width: 13.7%;
+    height: 800px;
+    float: left;
+}
+
+.menu {
+    /*background-color: rgb(90, 197, 99);*/
+    background-color: #216129;
+    border-right: 1px solid;
+    margin: 0 10px 0 0;
+    box-shadow: 4px 2px 0 #a6c08d;
+    position: fixed;
+    width: 13.7%;
+    height: 800px;
+    float: left;
+}
+    .menu h2 {
+        font-weight: 500;
+        font-size: 3rem; /*2rem*/
+        color: white;
+    }
+
+    .menu li {
+        line-height: 60px;
+        font-size: 18px;
+        text-decoration: none;
+        padding: 0 15px 0 5px;
+    }
+
+    .menu a {
+        font-weight: 300;
+        text-decoration: none;
+        color: white;
+    }
+
+    .menu a:hover {
+        font-size: 22px;
+        background-color: rgba(243, 243, 243, 0.89);
+        color: rgb(77, 54, 24);
+    }
+
+    .menu button {
+        width: 100px;
+        background-color: #d7dbdb;
+        padding: 10px;
+        font-size: 16px;
+        width: 140px;
+        color: white;
+        text-decoration: underline;
+    }
+
+.center {
+    width: 60%;
+    float: left;
+}
+
+    .center h2 {
+        padding: 15px 0 0 20px;
+    }
+
+.chat {
+    padding: 25px 0 0 50px;
+    border: 3px solid;
+    border-style: ridge;
+    background-color: beige;
+}
+
+    .chat li {
+        border: 1px solid gray;
+        border-radius: 12px;
+        background-color: white;
+        list-style: none;
+        padding-left: 50px;
+        padding-top: 15px;
+        padding-bottom: 20px;
+        margin-right: 50px;
+        margin-bottom: 30px;
+    }
+
+    .chat h3 {
+        margin: 10px 40px 20px 0;
+    }
+
+    .chat p {
+        margin: 0 40px 25px 0;
+    }
+    .chat img {
+        width: 400px;
+    }
+
+.right {
+    width: 23.9%; /*mudar para 25 após tirar as bordas*/
+    float: left;
+}
+
+.right h3{
+    color: white;
+}
+
+.postar {
+    /*#1d0040 #492707*/
+    background-color: #1d0040;
+    border: 2px solid gray;
+    border-radius: 5px;
+    margin-left: 30px;
+    margin-top: 80px;
+    position: fixed;
+    padding: 20px 60px 20px 20px;
+    font-size: 18px;
+    color: white;
+}
+
+.inputFormat {
+    width: 240px;
+    height: 25px;
+    font-size: 16px;
+}
+
+.postar textarea {
+    width: 240px;
+    font-size: 16px
+}
+
+.imagens-carregadas img{
+    width: 200px;
+}
+
+.btn-submit {
+    background-color: #25b61d;
+    width: 100px;
+    height: 30px;
+    color: white;
+    font-size: 16px;
+    margin: 40px 0 0 80px;
+}
+
+.form-logout{
+    margin: auto;
+}
+.form-logout button {
+    border-radius: 10px;
+    display: inline-block;
+    background-color: #003540;
+    text-decoration: none;
+    margin: auto;
+}
+
+
