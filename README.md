@@ -11,21 +11,29 @@ Para usar o sistema, é necessário que o usuário realize seu cadastro.
 A seguir imagens do sistema:
 
 -> Tela Inicial (index):
+
 ![Tela de inicio](https://github.com/ThiagoDeOliveiraAlves/CDES/assets/123216048/ff22fc8a-b782-42e4-ba6e-d42c4aefa8a9)
 
 -> Tela de Cadastro:
+
 ![Tela de Cadastro](https://github.com/ThiagoDeOliveiraAlves/CDES/assets/123216048/5d120855-0143-4297-a2fb-fe86ae66840e)
 
--> Tela de Login
+-> Tela de Login:
+
 ![Tela de Login](https://github.com/ThiagoDeOliveiraAlves/CDES/assets/123216048/ffe20437-910a-4c75-8a1e-2907aada0c86)
 
--> Tela principal (Chat Global)
+-> Tela principal (Chat Global):
+
 ![Tela principal](https://github.com/ThiagoDeOliveiraAlves/CDES/assets/123216048/00e89673-3737-4489-a1fe-e04ed072459c)
 
--> Tela Filtrar dicas
+-> Tela Filtrar dicas:
+
 ![Tela de filtragem](https://github.com/ThiagoDeOliveiraAlves/CDES/assets/123216048/bb2e3023-5107-41c5-99f7-edc0818667f6)
+
 ![Tela de filtragem1](https://github.com/ThiagoDeOliveiraAlves/CDES/assets/123216048/0c664d8a-997f-410a-bf9c-23c94cb9a7cd)
+
 ![Tela de filtragem2](https://github.com/ThiagoDeOliveiraAlves/CDES/assets/123216048/07aecc11-9d48-4b49-8b5e-f334129d49d5)
+
 ![Postagem filtrada](https://github.com/ThiagoDeOliveiraAlves/CDES/assets/123216048/42b95709-6829-4dd4-9a9b-6abb075f90d5)
 
 
