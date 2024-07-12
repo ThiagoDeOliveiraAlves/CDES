@@ -1,8 +1,7 @@
 Compartilhamento de Dicas e Experiências Sustentáveis (CDES)
 
-  Esse sistema foi criado em resposta a um projeto solicitado durante me curso na faculdade. 
-  Trata-se de uma plataforma que permite aos usuários compartilharem e visualizarem dicas e experiências sustentáveis, ou seja, é possível compartilhar dicas de economia de água, de economia de 
-  energia e reuso.
+  Esse sistema foi criado em resposta a um projeto solicitado durante meu curso na faculdade. 
+  Trata-se de uma plataforma que permite aos usuários compartilharem e visualizarem dicas e experiências sustentáveis, ou seja, é possível compartilhar dicas de economia de água, de economia de energia e reuso.
 
   O sistema disponibiliza um chat global onde é possível publicar as dicas. O usuário pode incluir texto, imagens e selecionar uma categoria para a publicação. O usuário também pode 
 visualizar as publicações feitas por outros usuários, onde é possível filtrar as publicações por categoria e por data.
